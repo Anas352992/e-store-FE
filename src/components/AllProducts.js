@@ -122,7 +122,7 @@ export default function Products() {
         className="row g-4 justify-content-center"
         style={{ marginTop: "100px" }}
       >
-        <h1 className="text-center">All Products</h1>
+        <h1 className="text-center">All Products 🏷️</h1>
         {shoeData.map((shoe) => (
           <div
             key={shoe.id}

@@ -105,7 +105,7 @@ function CheckoutPage() {
   return (
     <div className="checkout-wrapper">
       <div className="container">
-        <h2 className="checkout-title mb-2">CHECKOUT</h2>
+        <h2 style={{marginTop:"100px"}} className="checkout-title mb-2">CHECKOUT</h2>
         <p className="checkout-subtitle mb-5">
           Review your order and fill in delivery details
         </p>

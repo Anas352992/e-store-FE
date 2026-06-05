@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE = "http://localhost:5000/api";
+const BASE = "https://e-store-be.vercel.app/api";
 
 export const signupUser = createAsyncThunk(
   "auth/signup",
@@ -137,7 +137,7 @@ const useRedux = createSlice({
     currentUser: null,
     cartItems: [],
     LikeItems: [],
-    isLoading: true,
+    isLoading: false,
     checkoutLoading: true,
   },
 

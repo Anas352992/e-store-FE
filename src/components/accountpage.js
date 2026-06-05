@@ -19,6 +19,7 @@ export default function AccountPage() {
   const handleLogout = () => {
     dispatch(Logout());
     document.cookie = "isLoggedIn=; path=/; max-age=0";
+    document.cookie = "canCheckout=; path=/; max-age=0"
     router.replace("/login");
   };
 
