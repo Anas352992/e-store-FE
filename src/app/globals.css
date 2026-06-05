@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-fixed-top {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100%;
+  z-index: 1030 !important;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-special-font {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.nav-link-custom {
+  color: #111111 !important;
+  position: relative;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff4500;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+.nav-link-custom:hover {
+  color: #ff4500 !important;
+}
+
+.mobile-side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100%;
+  background: #111111;
+  z-index: 1060;
+  transition: right 0.4s ease-in-out;
+  padding: 30px;
+}
+
+.mobile-side-menu.active {
+  right: 0;
+}
+
+.mobile-nav-link {
+  color: #ffffff !important;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: block;
+  transition: 0.3s;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.mobile-nav-link:hover {
+  color: #ff4500 !important;
+  padding-left: 10px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+}
+
+.account-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+.account-card {
+  margin-top: 80px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.avatar-wrapper {
+  margin-bottom: 24px;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+}
+
+.avatar-text {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.user-info {
+  margin-bottom: 8px;
+}
+
+.user-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 8px;
+  word-break: break-word;
+}
+
+.user-email {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+  word-break: break-all;
+}
+.divider {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 32px 0;
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 16px 24px;
+  background: #1f2937;
+  border: 2px solid #1f2937;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: transparent;
+  color: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-logout svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-logout:hover svg {
+  transform: translateX(3px);
+}
+
+.brand-text {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .account-page {
+    padding: 40px 20px;
+  }
+
+  .account-card {
+    padding: 40px 24px;
+    border-radius: 20px;
+  }
+
+  .avatar-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .avatar-text {
+    font-size: 32px;
+  }
+
+  .user-name {
+    font-size: 22px;
+  }
+
+  .user-email {
+    font-size: 14px;
+  }
+
+  .divider {
+    margin: 28px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .account-page {
+    padding: 30px 15px;
+  }
+
+  .account-card {
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+  .avatar-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avatar-text {
+    font-size: 28px;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .divider {
+    margin: 24px 0;
+  }
+
+  .btn-logout {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .account-page {
+    padding: 20px 12px;
+  }
+
+  .account-card {
+    padding: 28px 16px;
+  }
+
+  .avatar-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .avatar-text {
+    font-size: 24px;
+  }
+
+  .user-name {
+    font-size: 18px;
+  }
+
+  .user-email {
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) {
+  .logo-box {
+    width: 140px;
+    height: 45px;
+  }
+
+  .p-name {
+    font-size: 16px;
+  }
+}
+
+.floating-cart-btn {
+  position: fixed;
+  right: 25px;
+  bottom: 35px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #111;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-cart-btn:hover {
+  transform: scale(1.15) rotate(-10deg);
+}
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  overflow-y: auto;
+  z-index: 15000;
+  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  padding: 30px 20px;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-header {
+  border-bottom: 2px solid #f4f4f4;
+  padding-bottom: 20px;
+}
+
+.btn-close-cart {
+  background: #f8f8f8;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-close-cart:hover {
+  background: #eee;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1500;
+}
+
+@media (max-width: 500px) {
+  .cart-sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .floating-cart-btn {
+    position: fixed;
+    right: 0px;
+    bottom: 120px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #111;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.footer-dark {
+  background: #000;
+  color: #fff;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 50px;
+    max-width: 120px;
+  }
+}
+
+body {
+  background-color: #f1f3f6;
+  font-family: "Inter", sans-serif;
+}
+
+.premium-shoe-card {
+  background: #ffffff;
+  border-radius: 35px;
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.premium-shoe-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.image-holder {
+  background: #f8f9fa;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.premium-shoe-card:hover .image-holder img {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.shoe-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.shoe-price {
+  font-weight: 800;
+  color: #ff4757;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-add-cart,
+.btn-add-wish {
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-add-cart {
+  background: #000;
+  color: #fff;
+}
+
+.btn-add-cart:hover {
+  background: #333;
+  letter-spacing: 2px;
+}
+
+.btn-add-wish {
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-add-wish:hover {
+  background: #000;
+  color: #fff;
+}
+/* checkout page css */
+.checkout-wrapper {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 40px 0 60px 0;
+}
+
+.checkout-title {
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.checkout-subtitle {
+  color: #888;
+}
+
+.checkout-item-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-item-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.checkout-item-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.checkout-item-price {
+  color: #e63946;
+  font-weight: 600;
+}
+
+.checkout-item-qty {
+  color: #888;
+  font-size: 13px;
+}
+
+.checkout-delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-delete-btn img {
+  width: 20px;
+}
+
+.checkout-total-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-total-price {
+  font-weight: 800;
+  font-size: 20px;
+  color: #e63946;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+
+.checkout-delivery-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-field-label {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.checkout-select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 14px;
+  background-color: #fff;
+  outline: none;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.checkout-select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+.checkout-select:focus {
+  border-color: #000;
+}
+
+.checkout-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.checkout-textarea:focus {
+  border-color: #000;
+}
+
+.checkout-place-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.checkout-place-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.checkout-place-btn:not(:disabled):hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .checkout-title {
+    font-size: 22px;
+  }
+
+  .checkout-item-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .checkout-delivery-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-wrapper {
+    padding: 24px 0 40px 0;
+  }
+
+  .checkout-item-card {
+    padding: 12px;
+  }
+}
+/* order page css */
+.order-placed-wrapper {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.order-placed-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #000;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.order-placed-title {
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.order-placed-msg {
+  color: #888;
+  font-size: 16px;
+  max-width: 360px;
+}
+
+.order-placed-redirect {
+  color: #bbb;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .order-placed-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .order-placed-title {
+    font-size: 22px;
+  }
+
+  .order-placed-msg {
+    font-size: 14px;
+  }
+}
