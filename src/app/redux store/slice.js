@@ -148,9 +148,6 @@ const useRedux = createSlice({
       state.LikeItems = [];
       localStorage.removeItem("token");
     },
-    setisLoading: (state, action) => {
-      state.isLoading = action.payload;
-    },
   },
 
   extraReducers: (builder) => {

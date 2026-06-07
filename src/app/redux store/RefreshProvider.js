@@ -11,8 +11,6 @@ export default function SessionProvider({ children }) {
     const token = localStorage.getItem("token");
     if (token && !currentUser) {
       dispatch(ItemsonRefresh());
-    } else {
-      dispatch(setisLoading(false));
     }
   }, []);
 
